@@ -38,3 +38,6 @@ next-env.d.ts
 # IDE
 .DS_Store
 .idea/
+
+
+.env
