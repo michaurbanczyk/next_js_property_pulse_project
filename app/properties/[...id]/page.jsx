@@ -5,6 +5,7 @@ import { fetchProperty } from "@/utils/requests";
 import PropertyHeaderImage from "@/components/PropertyHeaderImage";
 import Link from "next/link";
 import PropertyDetails from "@/components/PropertyDetails";
+import Spinner from "@/components/Spinner";
 
 function PropertyPage(props) {
   const { id } = useParams();
@@ -36,6 +37,10 @@ function PropertyPage(props) {
         Property Not Found
       </h1>
     );
+  }
+
+  if (loading) {
+    return <Spinner loading={loading} />;
   }
 
   return (
