@@ -26,7 +26,6 @@ function PropertyPage(props) {
       }
     };
     if (property === null) {
-      console.log("fetch!");
       void fetchPropertyData();
     }
   }, [id, property]);
